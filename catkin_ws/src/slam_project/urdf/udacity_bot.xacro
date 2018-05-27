@@ -202,6 +202,14 @@
     <parent link="chassis"/>
   </joint>
 
+  <link name="rgbd_frame"/>
+
+  <joint type="fixed" name="rgbd_frame_joint">
+    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
+    <child link="rgbd_frame"/>
+    <parent link="camera"/>
+  </joint>
+
   <link name="hokuyo">
     <visual name="visual">
       <origin xyz="0 0 0" rpy="0 0 0"/>
