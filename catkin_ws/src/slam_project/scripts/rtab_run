@@ -19,14 +19,13 @@ fi
 
 echo ' '
 
-read -p 'Enter target world destination or d for default: ' input_choice
+read -p 'Choose target world (1: kitchen_dining, 2: bot_cafe) : ' input_choice
 
-if [ “$input_choice” = “d” ]
+if [ “$input_choice” = “2” ]
 then
- xterm -e roslaunch slam_project world.launch world_file:=/home/shingo/work/RoboND-MayMyWorld-Project/catkin_ws/src/slam_project/worlds/kitchen_dining.world &
-
+ xterm -e roslaunch slam_project world.launch world_file:=/home/shingo/work/RoboND-MayMyWorld-Project/catkin_ws/src/slam_project/worlds/bot_cafe.world &
 else
- xterm -e roslaunch slam_project world.launch world_file:=$input_choice &
+ xterm -e roslaunch slam_project world.launch world_file:=/home/shingo/work/RoboND-MayMyWorld-Project/catkin_ws/src/slam_project/worlds/kitchen_dining.world &
 fi
 
 sleep 3
